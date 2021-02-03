@@ -19,7 +19,7 @@ def craftingShapeless(recipeName, resultID, resultNum, ingredientIDs):
         ingredientIDString += "\n\t\t"
         ingredientIDString += (ctID(ingredientIDs[i]))
         if i < (len(ingredientIDs) - 1):
-            ingredientIDString += ctID(ingredientIDs[i])
+            ingredientIDString += ", "
 
     return f"craftingTable.addShapeless(\"{recipeName}\",\n\t{ctID(resultID)}*{resultNum}, [{ingredientIDString}]);\n"
 
