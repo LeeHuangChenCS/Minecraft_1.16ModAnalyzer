@@ -42,3 +42,11 @@ def mergedLangDictOfAllMods():
         modLang = itemDictFmLangFile(langDir)
         mergeLangDicts(allLang, modLang)
     return allLang
+
+def reverseLangDict(langDict):
+    reverseLang = {}
+    for itemID in langDict.keys():
+        itemName = langDict[itemID]
+        if itemName not in reverseLang.keys():
+            reverseLang[itemName] = itemID
+    return reverseLang
